@@ -27,7 +27,39 @@ TM5M - 700 Robotic Manipulator Integration
 
 ## ARCL commands used
 ```
-"createinfo " + "id_pieza "+ "40 " +"Default "+ newline 
+createinfo infoName maxLen infoValue
+```
+"createinfo " + "indication "+  "2 " + "0" + newline
+
+The command returns (seen via PuTTY):
+    Created info for indication
+
+```
+updateinfo infoName infoUpdate
+```
+"updateinfo " + "id_pieza " + var_identero
+
+The command returns:
+    Updated info for id_pieza
+
+```
+getinfo infoName
+```
+"getinfo " + "indication "
+
+The command returns:
+    Info: indication 0
+     
+```
+status
+```
+
+```
+stop
+```
+
+```
+goto targetLocation
 ```
 ## Resources
 
