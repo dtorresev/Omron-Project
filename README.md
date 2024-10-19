@@ -32,7 +32,7 @@ createinfo infoName maxLen infoValue
 "createinfo " + "indication "+  "2 " + "0" + newline
 
 The command returns (seen via PuTTY):
-    Created info for indication
+> Created info for indication
 
 ```
 updateinfo infoName infoUpdate
@@ -40,7 +40,7 @@ updateinfo infoName infoUpdate
 "updateinfo " + "id_pieza " + var_identero
 
 The command returns:
-    Updated info for id_pieza
+> Updated info for id_pieza
 
 ```
 getinfo infoName
@@ -48,7 +48,7 @@ getinfo infoName
 "getinfo " + "indication "
 
 The command returns:
-    Info: indication 0
+> Info: indication 0
      
 ```
 status
@@ -63,5 +63,5 @@ goto targetLocation
 ```
 ## Resources
 
-https://assets.omron.eu/downloads/manual/en/v2/i623_collaborative_robots_hardware_installation_manual_en.pdf 
-https://assets.omron.eu/downloads/latest/manual/en/i617_advanced_robotics_command_language_(arcl)_reference_manual_en.pdf?v=14 
+[Hardware] (https://assets.omron.eu/downloads/manual/en/v2/i623_collaborative_robots_hardware_installation_manual_en.pdf) 
+[ARCL reference manual](https://assets.omron.eu/downloads/latest/manual/en/i617_advanced_robotics_command_language_(arcl)_reference_manual_en.pdf?v=14) 
