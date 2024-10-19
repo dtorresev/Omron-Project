@@ -25,6 +25,8 @@ TM5M - 700 Robotic Manipulator Integration
 
 1.9 Gestión del Proceso de Carga y Manipulación
 
+![Captura de pantalla 2024-10-16 200906](https://github.com/user-attachments/assets/b8aaa957-90a5-49b1-b034-57702a71b39a)
+
 ## ARCL commands used
 ```
 createinfo infoName maxLen infoValue
