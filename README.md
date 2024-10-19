@@ -25,7 +25,15 @@ TM5M - 700 Robotic Manipulator Integration
 
 1.9 Gestión del Proceso de Carga y Manipulación
 
-![Captura de pantalla 2024-10-16 200906](https://github.com/user-attachments/assets/b8aaa957-90a5-49b1-b034-57702a71b39a)
+![Captura de pantalla 2024-10-16 200906](https://github.com/user-attachments/assets/b8aaa957-90a5-49b1-b034-57702a71b39a)  
+
+## Software
+
+- [TMFlow 1.86.1900](https://automation.omron.com/en/us/products/family/Omron%20TM%20Software)
+- [Mobile Planner 5.4](https://automation.omron.com/en/ca/products/family/Mobile%20Planner)
+
+![MobilePlanner_img](https://github.com/user-attachments/assets/40a63cbc-15f4-4678-a65e-ab009980cb5f)
+
 
 ## ARCL commands used
 ```
