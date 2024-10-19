@@ -26,9 +26,9 @@ TM5M - 700 Robotic Manipulator Integration
 1.9 Gestión del Proceso de Carga y Manipulación
 
 ## ARCL commands used
-´´´´
+´´´
 "createinfo " + "id_pieza "+ "40 " +"Default "+ newline 
-´´´´
+´´´
 ## Resources
 
 https://assets.omron.eu/downloads/manual/en/v2/i623_collaborative_robots_hardware_installation_manual_en.pdf 
