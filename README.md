@@ -51,12 +51,22 @@ A brief description of the robots' capabilities:
 
 
 ## ARCL
+Advanced Robotics Command Language (ARCL) is a simple command-and-response operating language developed by Omron Robotics and Safety Technologies, Inc. used for their Autonomous Mobile Robots (AMR) to communicate with other external automation systems.
+
+This language allows users to operate and monitor the AMR's operations using command prompts via PuTTY or Telnet, providing a more efficient interface to perform debugging, assessment and evaluating processes.
+
+Before performing any operation using ARCL, an initial setup was done, where the ARCL server address were defined, plus the set up of an access port and a password to connect with the mobile robot.
+
+For a collaborative access and ease of use, the access port and password were left as default parameters as seen in the _Figure 2-1. ARCL Server Setup Parameters_ shown below (from the ARCL Reference Guide).
+
+![ARCL Server Parameters](https://github.com/user-attachments/assets/e8ad42bc-e146-4717-b143-2dbb92d24d3d)
+
 ```
 createinfo infoName maxLen infoValue
 ```
 "createinfo " + "indication "+  "2 " + "0" + newline
 
-The command returns (seen via PuTTY):
+The command returns (seen via command prompt terminal):
 > Created info for indication
 
 ```
