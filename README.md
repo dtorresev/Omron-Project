@@ -30,18 +30,24 @@ TM5M - 700 Robotic Manipulator Integration
 - [About](#about)
 - [Software](#software)
 - [ARCL](#arcl)
+- [Vision System](#vision-system)
 - [Resources](#resources)
 
 ![Captura de pantalla 2024-10-16 200906](https://github.com/user-attachments/assets/b8aaa957-90a5-49b1-b034-57702a71b39a)  
 
 ## About
 
-This project was developed as part of our concentration in Cyber-Physical Systems, integrating collaborative robotics tools and equipment such as a TM5M-700 manipulator and an LD60 Autonomous Mobile Robot, equipment from Omron Automation available at Smart Factory MTY, an intelligent laboratory intended for improving, automating and enhancing ma
-nufacturing processes at Tecnológico de Monterrey (Monterrey Campus).
+This project was developed as part of our concentration in Cyber-Physical Systems Tecnológico de Monterrey (Monterrey Campus), integrating collaborative robotics tools and equipment such as a TM5M-700 manipulator and an LD60 Autonomous Mobile Robot, equipment from Omron Automation available at Smart Factory MTY, an intelligent laboratory intended for improving, automating and enhancing manufacturing processes.
 
 A brief description of the robots' capabilities:
-- [TM5M-700]()
-- [LD-60](https://industrial.omron.es/es/products/ld-series)
+* [TM5M-700]()
+* [LD-60](https://industrial.omron.es/es/products/ld-series)
+  * Maximum load capacity: 60 kg.
+  * Automatic efficient route planning and collision prevention.
+  * Indoor usage.
+  * Integrates safety laser scanners on bot front and back panels.
+
+
 ## Software
 
 - [TMFlow 1.86.1900](https://automation.omron.com/en/us/products/family/Omron%20TM%20Software)
@@ -111,8 +117,14 @@ The command returns:
 > Going to Goal
 
 Sending the robot to the selected target location.
+
+## Vision System
+
+
 ## Resources
 
 - [Hardware Installation Guide](https://assets.omron.eu/downloads/manual/en/v2/i623_collaborative_robots_hardware_installation_manual_en.pdf) 
 
 - [ARCL Reference Manual](https://assets.omron.eu/downloads/latest/manual/en/i617_advanced_robotics_command_language_(arcl)_reference_manual_en.pdf?v=14) 
+
+- [LD60 Series datasheet](https://assets.omron.eu/downloads/latest/datasheet/en/i828_ld-series_mobile_robot_datasheet_en.pdf?v=27)
