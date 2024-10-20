@@ -59,7 +59,9 @@ Before performing any operation using ARCL, an initial setup was done, where the
 
 For a collaborative access and ease of use, the access port and password were left as default parameters as seen in the _Figure 2-1. ARCL Server Setup Parameters_ shown below (from the ARCL Reference Guide).
 
-![ARCL Server Parameters](https://github.com/user-attachments/assets/e8ad42bc-e146-4717-b143-2dbb92d24d3d)
+![ARCL Server Parameters](https://github.com/user-attachments/assets/2102fe4d-86fd-4c56-a6a3-daaf175fcd23)
+
+### Commands
 
 ```
 createinfo infoName maxLen infoValue
