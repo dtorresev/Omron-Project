@@ -3,16 +3,6 @@ Collaborative and Mobile Robotics Integration
 
 TM5M - 700 Robotic Manipulator Integration
 
-1.1 Automatización con Tecnologías Omron
-
-- Marco teórico de Omron al dia de hoy
-
-- Ventajas de LD Y TM
-
-1.2 Robot Móvil Autónomo Omron LD
-
-1.3 Robot Colaborativo Omron TM
-
 1.4 Desarrollo de Algoritmos para Control y Navegación [Comunicación y base de datos]
 
 1.7 Optimización de Trayectorias en el Robot Omron LD
@@ -25,7 +15,7 @@ TM5M - 700 Robotic Manipulator Integration
 
 1.9 Gestión del Proceso de Carga y Manipulación
 
-## Index
+## Table of Contents
 
 - [About](#about)
 - [Software](#software)
@@ -93,7 +83,8 @@ Whenever new information was updated with a string containing spaces said string
 Would only display:
 > Info: id_pieza BLANCO
 
-This issue was solved by using a colon (:) to indicate the division of the part's information.
+This issue was solved by using a colon [ : 
+] to indicate the division of the part's information.
 
 Introducing data like the the part's batch and ID number, as well as the color of the part being used in the process.
 
@@ -166,6 +157,25 @@ The command returns:
 Sending the robot to the selected target location.
 
 ## Vision System
+
+The TM5M-700 manipulator has a 5M-pixel camera attached to the wrist joint of the robot. Including a lightning ring to improve image quality captured to perform Automated Optical Inspections (AOI).
+
+For this project, the vision system was used extensively to improve the program.  Some of the features where the vision system was used for the project include:
+
+- Robot Servoing
+- QR Scanning
+- Color Detection
+
+__Robot Servoing__: Used to automatically re-orient the robot into a correct picking position whenever the part was left on the picking table with a certain tilt or different position than the one originally established (within range). 
+* Imagen de los ejes
+
+__QR Scanning__: Containing information regarding the batch and part ID of the product being manipulated, useful for traceability purposes to track any quality issues in the process.
+* iMAGEN
+
+
+__Color Detection__: In this case, the robot was set different criterias for evaluation to label the color of the part, being blue, white or default the main labels indicated. Here blue represented a faulty or deffective part, white a standard quality, and default indicated that there was not enough information to label the part's color, like an empty tray.
+* Imagen de COLOR_detect
+* Imagen del diagrama
 
 
 ## Resources
