@@ -23,7 +23,6 @@ TM5M - 700 Robotic Manipulator Integration
 - [Vision System](#vision-system)
 - [Resources](#resources)
 
-![Captura de pantalla 2024-10-16 200906](https://github.com/user-attachments/assets/b8aaa957-90a5-49b1-b034-57702a71b39a)  
 
 ## About
 
@@ -34,7 +33,7 @@ A brief description of the robots' capabilities and features:
   * Payload: 6kg
   * Reach: 700mm
   * Tool:
-      - Inputs: Digital: 4, Analog: 1
+      - Inputs-> Digital: 4, Analog: 1
       - Outputs -> Digital: 4
   * Control Box:
       - Inputs -> Digital: 16, Analog: 2
@@ -49,12 +48,16 @@ A brief description of the robots' capabilities and features:
   * Maximum load capacity: 60 kg.
   * Automatic efficient route planning and collision prevention.
   * Indoor usage.
-  * Integrates safety laser scanners on bot front and back panels.
+  * Integrates safety laser scanners on both front and back panels.
 
 
 ## Software
 
 - [TMFlow 1.86.1900](https://automation.omron.com/en/us/products/family/Omron%20TM%20Software)
+
+![TMFlow_img](https://github.com/user-attachments/assets/1dcdadf3-dc59-4368-a38d-a01f8f302d30)
+
+
 - [Mobile Planner 5.4](https://automation.omron.com/en/ca/products/family/Mobile%20Planner)
 
 ![MobilePlanner_img](https://github.com/user-attachments/assets/40a63cbc-15f4-4678-a65e-ab009980cb5f)
@@ -169,14 +172,34 @@ For this project, the vision system was used extensively to improve the program.
 __Robot Servoing__: Used to automatically re-orient the robot into a correct picking position whenever the part was left on the picking table with a certain tilt or different position than the one originally established (within range). 
 * Imagen de los ejes
 
+![Captura de pantalla 2024-10-21 143641](https://github.com/user-attachments/assets/c3c72cf0-aabb-49dc-95ed-42b6c241ec7e)
+
+
+
+
 __QR Scanning__: Containing information regarding the batch and part ID of the product being manipulated, useful for traceability purposes to track any quality issues in the process.
-* iMAGEN
+
+![Captura de pantalla 2024-10-21 143837](https://github.com/user-attachments/assets/de8622a1-9a71-44d4-bb65-d12d04cfdbb9)
+
 
 
 __Color Detection__: In this case, the robot was set different criterias for evaluation to label the color of the part, being blue, white or default the main labels indicated. Here blue represented a faulty or deffective part, white a standard quality, and default indicated that there was not enough information to label the part's color, like an empty tray.
-* Imagen de COLOR_detect
+
+![Captura de pantalla 2024-10-21 144100](https://github.com/user-attachments/assets/b55f9e43-cfd2-44f0-8597-a6e41326c0c0) 
+
 * Imagen del diagrama
 
+## Process
+
+The whole program started with the TM5M-700 connecting to the LD60 mobile robot as a network device, using its IP address aswell as the specified port for communication, and prompting the set password. 
+
+Subsequently, information packages such as the indication variable, the part's ID, and current working station were created (Note that this is only required to be done once.)
+
+![createinfo_img](https://github.com/user-attachments/assets/d1ed0342-e6f3-4ad5-a778-e8fda522715c)
+
+
+
+![updateinfo_img](https://github.com/user-attachments/assets/dc166578-878e-4b76-a756-1c3cde645170)
 
 ## Resources
 
