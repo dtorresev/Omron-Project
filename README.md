@@ -39,8 +39,22 @@ TM5M - 700 Robotic Manipulator Integration
 
 This project was developed as part of our concentration in Cyber-Physical Systems Tecnológico de Monterrey (Monterrey Campus), integrating collaborative robotics tools and equipment such as a TM5M-700 manipulator and an LD60 Autonomous Mobile Robot, equipment from Omron Automation available at Smart Factory MTY, an intelligent laboratory intended for improving, automating and enhancing manufacturing processes.
 
-A brief description of the robots' capabilities:
-* [TM5M-700]()
+A brief description of the robots' capabilities and features:
+* [TM5M-700](https://assets.omron.com/m/51e5aefd34c8f75e/original/TM-Series-Collaborative-Robot-Datasheet.pdf)
+  * Payload: 6kg
+  * Reach: 700mm
+  * Tool:
+      - Inputs: Digital: 4, Analog: 1
+      - Outputs -> Digital: 4
+  * Control Box:
+      - Inputs -> Digital: 16, Analog: 2
+      - Outputs -> Digital: 16, Analog: 1
+  * Communication:
+     - RS232
+     - Ethernet 
+     - Modbus TCP/RTU
+  * Integrated 5-megapixel color camera.
+
 * [LD-60](https://industrial.omron.es/es/products/ld-series)
   * Maximum load capacity: 60 kg.
   * Automatic efficient route planning and collision prevention.
@@ -68,6 +82,27 @@ For a collaborative access and ease of use, the access port and password were le
 ![ARCL Server Parameters](https://github.com/user-attachments/assets/2102fe4d-86fd-4c56-a6a3-daaf175fcd23)
 
 ### Commands
+One key aspect to address when using commands to connect with the mobile robot via a command prompt terminal comes with te use of __spaces__ and __indentations__, the terminal will recognize spaces as delimiters for new parameters to be added. This issue was a recurring obstacle for our progress.
+
+Whenever new information was updated with a string containing spaces said string would appear as a trimmed version of the original data. For example, sending the following prompt:
+
+```
+"updateinfo " + "id_pieza " + "LOTE 1 PIEZA 1 BLANCO" + newline
+```
+
+Would only display:
+> Info: id_pieza BLANCO
+
+This issue was solved by using a colon (:) to indicate the division of the part's information.
+
+Introducing data like the the part's batch and ID number, as well as the color of the part being used in the process.
+
+```
+var_identero = "LOTE1:PIEZA1:" + "BLANCO"
+
+"updateinfo " + "id_pieza " + var_identero + newline
+```
+An explanation of the main commands used for this project is displayed below:
 
 ```
 createinfo infoName maxLen infoValue
@@ -84,6 +119,18 @@ updateinfo infoName infoUpdate
 
 The command returns:
 > Updated info for id_pieza
+
+```
+getinfolist
+```
+"getinfolist " + newline
+
+An example of how the _getinfolist_ command is displayed in the terminal can be shown below:
+
+<img src="https://github.com/user-attachments/assets/89db6b9f-9b85-445f-ad7d-cc8cffb41733" alt="Alt Text" width="200" height="200">
+
+Using getinfolist early in the program development allowed for easier debugging tasks and saving time when verifying the succesfull creation of information packages. 
+
 
 ```
 getinfo infoName
@@ -128,3 +175,5 @@ Sending the robot to the selected target location.
 - [ARCL Reference Manual](https://assets.omron.eu/downloads/latest/manual/en/i617_advanced_robotics_command_language_(arcl)_reference_manual_en.pdf?v=14) 
 
 - [LD60 Series datasheet](https://assets.omron.eu/downloads/latest/datasheet/en/i828_ld-series_mobile_robot_datasheet_en.pdf?v=27)
+
+- [TM5M-700 Datasheet](https://assets.omron.com/m/51e5aefd34c8f75e/original/TM-Series-Collaborative-Robot-Datasheet.pdf)
