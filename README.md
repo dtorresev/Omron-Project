@@ -170,17 +170,23 @@ For this project, the vision system was used extensively to improve the program.
 - Color Detection
 
 __Robot Servoing__: Used to automatically re-orient the robot into a correct picking position whenever the part was left on the picking table with a certain tilt or different position than the one originally established (within range). 
-* Imagen de los ejes
+
+The first step to utilizing Robot Servoing features in TMFlow begins with the identification of a visual pattern to be identified, although Smart Pattern Learner is available, we manually edited the selected pattern to recognize the 3 main square blocks that comprise the QR codes used, as well as a small one on the top right corner, it is crucial to highlight the use of the right lightning and distance to perform quality visual inspections.
+
+![Captura de pantalla 2024-10-21 143528](https://github.com/user-attachments/assets/50da10c4-5e92-41d3-ad10-4fe7b7955a7b)
+
+Once the pattern is set, the Servoing Target shall be set as well, in this case, it was intended for the robot to align its Tool Center Point with the corresponding orientation of the QR code, so we selected the _Use Current Position_ feature.
+
+![Captura de pantalla 2024-10-21 143554](https://github.com/user-attachments/assets/69b6bbc2-02e8-4126-b4bf-756a003d8fcd)
 
 ![Captura de pantalla 2024-10-21 143641](https://github.com/user-attachments/assets/c3c72cf0-aabb-49dc-95ed-42b6c241ec7e)
 
-
+Once this three-step process is concluded, the robot servoing is ready to go. 
 
 
 __QR Scanning__: Containing information regarding the batch and part ID of the product being manipulated, useful for traceability purposes to track any quality issues in the process.
 
 ![Captura de pantalla 2024-10-21 143837](https://github.com/user-attachments/assets/de8622a1-9a71-44d4-bb65-d12d04cfdbb9)
-
 
 
 __Color Detection__: In this case, the robot was set different criterias for evaluation to label the color of the part, being blue, white or default the main labels indicated. Here blue represented a faulty or deffective part, white a standard quality, and default indicated that there was not enough information to label the part's color, like an empty tray.
