@@ -1,26 +1,18 @@
 # Omron-Project
-Collaborative and Mobile Robotics Integration
-
-TM5M - 700 Robotic Manipulator Integration
-
-1.4 Desarrollo de Algoritmos para Control y Navegación [Comunicación y base de datos]
-
-1.7 Optimización de Trayectorias en el Robot Omron LD
-
-1.5 Sistemas de Visión para Reconocimiento y Percepción
-
-1.6 Automatización del Proceso de Pick (Recogida)
-
-1.8 Automatización del Proceso de Place (Colocación)
-
-1.9 Gestión del Proceso de Carga y Manipulación
+Collaborative and Mobile Robotics Integration.
 
 ## Table of Contents
 
 - [About](#about)
+
 - [Software](#software)
+
+- [Mapping](#mapping)
+
 - [ARCL](#arcl)
+
 - [Vision System](#vision-system)
+
 - [Resources](#resources)
 
 
@@ -61,6 +53,16 @@ A brief description of the robots' capabilities and features:
 - [Mobile Planner 5.4](https://automation.omron.com/en/ca/products/family/Mobile%20Planner)
 
 ![MobilePlanner_img](https://github.com/user-attachments/assets/40a63cbc-15f4-4678-a65e-ab009980cb5f)
+
+## Mapping
+
+Using MobilePlanner, an intial connection with the mobile robot was done, using its IP address and an admin account, this software is used only for the mobile robot's mapping and trajectory, thus only the LD60 was connected. The robot did an area scan to do an intitial mapping of the laboratory, using relevant features for mobile robotics like LiDARS, obstacle detection and path planning. The "working space" for the robot was left after defining the areas to be excluded for the robot trajectories which would include walls, tables, chairs, and other laboratory equipment that is intended to be avoided by the robot.
+
+![Captura de pantalla 2024-10-17 172128](https://github.com/user-attachments/assets/3d443fe0-e0cc-4641-b350-56d3616c15aa)
+
+Then, goals were set, where locations are established for the robot to head to when instructed to move, for the main process, four locations were set, 3 main goals and one home location.
+
+The last thing performed using MobilePlanner was the delimitation of preferred trajectories to be followed by the robot, imitating an industrial environment where the robot's working area and walkways must be indicated and signposted.
 
 
 ## ARCL
@@ -193,7 +195,10 @@ __Color Detection__: In this case, the robot was set different criterias for eva
 
 ![Captura de pantalla 2024-10-21 144100](https://github.com/user-attachments/assets/b55f9e43-cfd2-44f0-8597-a6e41326c0c0) 
 
-* Imagen del diagrama
+The vision subprocess is composed of the 3 previous features, where ther manipulator's camera is located in a reading position perpendicular to the part, runs the vision tasks then using multiple displays for debugging purposes, and creating a variable with the batch, ID and color of the part.
+
+<img src="https://github.com/user-attachments/assets/7b2131af-5f3d-4bc2-a36d-0542814a072a" alt="VisionProcess" width="400" height="450">
+
 
 ## Process
 
@@ -203,9 +208,17 @@ Subsequently, information packages such as the indication variable, the part's I
 
 ![createinfo_img](https://github.com/user-attachments/assets/d1ed0342-e6f3-4ad5-a778-e8fda522715c)
 
-
+The variables are initialized with default values, but they are reinitialized once the process has concluded.
 
 ![updateinfo_img](https://github.com/user-attachments/assets/dc166578-878e-4b76-a756-1c3cde645170)
+
+Then, the indication value is read indefinitel, where the manipulator loudly states "Waiting for Indication" in a loop until the indication value is updated by the host via Telnet.
+
+<img src="https://github.com/user-attachments/assets/280eacf4-9baf-471a-b1bc-84e0aacf1605" alt="VisionProcess" width="550" height="300"> 
+
+Once the robot has read the indication value set to 1, the robot will move to the Goal3, where the part to inspect has been dropped, proceeds with the visual inspection, picks up the part, and travels to the indicated Goal depending on the color identified. When the part is left in position, the robot travels to the Home station and updates the indication value to a 0, restarting the process and waiting for another indication to be sent. 
+   
+![img](https://github.com/user-attachments/assets/5b868b6a-3e25-4204-86cb-e72ad1ed1948)
 
 ## Resources
 
