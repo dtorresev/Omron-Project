@@ -220,6 +220,13 @@ Once the robot has read the indication value set to 1, the robot will move to th
    
 ![img](https://github.com/user-attachments/assets/5b868b6a-3e25-4204-86cb-e72ad1ed1948)
 
+## Results
+
+The performance of the program worked as expected, picking up the parts from the indicated places as established and delivering them to the corresponding station, uploading the part's information to a dashboard updated via Telnet using ARCL.
+
+__Improvements__ -
+Some huge areas of opportunity can be identified for this particular project, from the trajectory creation by adding mid points to prevent failures when reaching or appraching goal locations, adding landmarks to perform robot servoing aside from the QR inspection, providing a more efficient approach in the pick process, including more process variables to update the robot's state during operation, and increasing the manipulator's velocity during the picking and placing process to decrease times. 
+
 ## Resources
 
 - [Hardware Installation Guide](https://assets.omron.eu/downloads/manual/en/v2/i623_collaborative_robots_hardware_installation_manual_en.pdf) 
