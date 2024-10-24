@@ -72,7 +72,7 @@ This language allows users to operate and monitor the AMR's operations using com
 
 Before performing any operation using ARCL, an initial setup was done, where the ARCL server address were defined, plus the set up of an access port and a password to connect with the mobile robot.
 
-For a collaborative access and ease of use, the access port and password were left as default parameters as seen in the _Figure 2-1. ARCL Server Setup Parameters_ shown below (from the ARCL Reference Guide).
+Access port and password can be left as default parameters as seen in the _Figure 2-1. ARCL Server Setup Parameters_ shown below (from the ARCL Reference Guide).
 
 ![ARCL Server Parameters](https://github.com/user-attachments/assets/2102fe4d-86fd-4c56-a6a3-daaf175fcd23)
 
