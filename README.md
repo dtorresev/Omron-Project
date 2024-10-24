@@ -56,7 +56,7 @@ A brief description of the robots' capabilities and features:
 
 ## Mapping
 
-Using MobilePlanner, an intial connection with the mobile robot was done, using its IP address and an admin account, this software is used only for the mobile robot's mapping and trajectory, thus only the LD60 was connected. The robot did an area scan to do an intitial mapping of the laboratory, using relevant features for mobile robotics like LiDARS, obstacle detection and path planning. The "working space" for the robot was left after defining the areas to be excluded for the robot trajectories which would include walls, tables, chairs, and other laboratory equipment that is intended to be avoided by the robot.
+Using MobilePlanner, an initial connection with the mobile robot was done, using its IP address and an admin account, this software is used only for the mobile robot's mapping and trajectory, thus only the LD60 was connected. The robot did an area scan to do an initial mapping of the laboratory, using relevant features for mobile robotics like LiDARS, obstacle detection and path planning. The "working space" for the robot was left after defining the areas to be excluded for the robot trajectories which would include walls, tables, chairs, and other laboratory equipment that is intended to be avoided by the robot.
 
 ![Captura de pantalla 2024-10-17 172128](https://github.com/user-attachments/assets/3d443fe0-e0cc-4641-b350-56d3616c15aa)
 
@@ -125,7 +125,7 @@ An example of how the _getinfolist_ command is displayed in the terminal can be 
 
 <img src="https://github.com/user-attachments/assets/89db6b9f-9b85-445f-ad7d-cc8cffb41733" alt="Alt Text" width="200" height="200">
 
-Using getinfolist early in the program development allowed for easier debugging tasks and saving time when verifying the succesfull creation of information packages. 
+Using getinfolist early in the program development allowed for easier debugging tasks and saving time when verifying the succesful creation of information packages. 
 
 
 ```
@@ -191,18 +191,18 @@ __QR Scanning__: Containing information regarding the batch and part ID of the p
 ![Captura de pantalla 2024-10-21 143837](https://github.com/user-attachments/assets/de8622a1-9a71-44d4-bb65-d12d04cfdbb9)
 
 
-__Color Detection__: In this case, the robot was set different criterias for evaluation to label the color of the part, being blue, white or default the main labels indicated. Here blue represented a faulty or deffective part, white a standard quality, and default indicated that there was not enough information to label the part's color, like an empty tray.
+__Color Detection__: In this case, the robot was set different criteria for evaluation to label the color of the part, being blue, white or default the main labels indicated. Here blue represented a faulty or defective part, white a standard quality, and default indicated that there was not enough information to label the part's color, like an empty tray.
 
 ![Captura de pantalla 2024-10-21 144100](https://github.com/user-attachments/assets/b55f9e43-cfd2-44f0-8597-a6e41326c0c0) 
 
-The vision subprocess is composed of the 3 previous features, where ther manipulator's camera is located in a reading position perpendicular to the part, runs the vision tasks then using multiple displays for debugging purposes, and creating a variable with the batch, ID and color of the part.
+The vision subprocess is composed of the 3 previous features, where the manipulator's camera is located in a reading position perpendicular to the part, runs the vision tasks then using multiple displays for debugging purposes, and creating a variable with the batch, ID and color of the part.
 
 <img src="https://github.com/user-attachments/assets/7b2131af-5f3d-4bc2-a36d-0542814a072a" alt="VisionProcess" width="400" height="450">
 
 
 ## Process
 
-The whole program started with the TM5M-700 connecting to the LD60 mobile robot as a network device, using its IP address aswell as the specified port for communication, and prompting the set password. 
+The whole program started with the TM5M-700 connecting to the LD60 mobile robot as a network device, using its IP address as well as the specified port for communication, and prompting the set password. 
 
 Subsequently, information packages such as the indication variable, the part's ID, and current working station were created (Note that this is only required to be done once.)
 
@@ -212,7 +212,7 @@ The variables are initialized with default values, but they are reinitialized on
 
 ![updateinfo_img](https://github.com/user-attachments/assets/dc166578-878e-4b76-a756-1c3cde645170)
 
-Then, the indication value is read indefinitel, where the manipulator loudly states "Waiting for Indication" in a loop until the indication value is updated by the host via Telnet.
+Then, the indication value is read indefinitely, where the manipulator loudly states "Waiting for Indication" in a loop until the indication value is updated by the host via Telnet.
 
 <img src="https://github.com/user-attachments/assets/280eacf4-9baf-471a-b1bc-84e0aacf1605" alt="VisionProcess" width="550" height="300"> 
 
@@ -225,7 +225,7 @@ Once the robot has read the indication value set to 1, the robot will move to th
 The performance of the program worked as expected, picking up the parts from the indicated places as established and delivering them to the corresponding station, uploading the part's information to a dashboard updated via Telnet using ARCL.
 
 __Improvements__ -
-Some huge areas of opportunity can be identified for this particular project, from the trajectory creation by adding mid points to prevent failures when reaching or appraching goal locations, adding landmarks to perform robot servoing aside from the QR inspection, providing a more efficient approach in the pick process, including more process variables to update the robot's state during operation, and increasing the manipulator's velocity during the picking and placing process to decrease times. 
+Some huge areas of opportunity can be identified for this particular project, from the trajectory creation by adding mid points to prevent failures when reaching or approaching goal locations, adding landmarks to perform robot servoing aside from the QR inspection, providing a more efficient approach in the pick process, including more process variables to update the robot's state during operation, and increasing the manipulator's velocity during the picking and placing process to decrease times. 
 
 ## Resources
 
