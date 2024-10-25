@@ -196,7 +196,7 @@ Once this three-step process is concluded, the robot servoing is ready to go.
 
 __QR Scanning__: Containing information regarding the batch and part ID of the product being manipulated, useful for traceability purposes to track any quality issues in the process.
 
-![Captura de pantalla 2024-10-21 143837](https://github.com/user-attachments/assets/de8622a1-9a71-44d4-bb65-d12d04cfdbb9)
+![img](https://github.com/user-attachments/assets/de8622a1-9a71-44d4-bb65-d12d04cfdbb9)
 
 
 __Color Detection__: In this case, the robot was set different criteria for evaluation to label the color of the part, being blue, white or default the main labels indicated. Here blue represented a faulty or defective part, white a standard quality, and default indicated that there was not enough information to label the part's color, like an empty tray.
