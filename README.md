@@ -232,7 +232,7 @@ Once the robot has read the indication value set to 1, the robot will move to th
 
 > PI Vision was not included in the initial delivery of this project.
 
-Using a Modbus protocol implementing Modbus TCP/IP, communication was established with the TM5M-700 manipulator. 
+Implementing Modbus TCP/IP communication was established with the TM5M-700 manipulator. 
 
 Using AVEVA PI System, and joining a local server created for Tecnológico de Monterrey, we were able to create a personal database to gather information from the robot, monitoring its state during operation.
 
