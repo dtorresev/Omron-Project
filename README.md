@@ -25,7 +25,7 @@
 
 This project was developed as part of our concentration in Cyber-Physical Systems at Tecnológico de Monterrey (Monterrey Campus), integrating collaborative robotics tools and equipment such as a TM5M-700 manipulator and an LD60 Autonomous Mobile Robot, equipment from Omron Automation available at Smart Factory MTY, an intelligent laboratory intended for improving, automating and enhancing manufacturing processes.
 
-&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;<img src="https://github.com/user-attachments/assets/5f6d4754-e80f-4c66-a3d7-9656813c37b6" alt="omron_lab" width="700" height="800" >
+&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;<img src="https://github.com/user-attachments/assets/5f6d4754-e80f-4c66-a3d7-9656813c37b6" alt="omron_lab" width="400" height="533" >
 
 
 A brief description of the robots' capabilities and features:
