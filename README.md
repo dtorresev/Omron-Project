@@ -227,7 +227,7 @@ Once the robot has read the indication value set to 1, the robot will move to th
 
 ## PI System
 
-> PI Vision was not included for the initial delivery of this project.
+> PI Vision was not included in the initial delivery of this project.
 
 Using a Modbus protocol implementing Modbus TCP/IP, communication was established with the TM5M-700 manipulator. 
 
