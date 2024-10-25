@@ -1,6 +1,6 @@
 # Omron-Project
 
-<img src="https://github.com/user-attachments/assets/59931057-4709-4bf5-9fed-4772df0355c9" alt="tec_logo" width="350" height="75"> &emsp;  &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&emsp;&emsp;&ensp; &emsp;&emsp;&ensp; &emsp;&emsp;&ensp; &emsp;&emsp;&ensp;&emsp;&emsp;&ensp;<img src="https://github.com/user-attachments/assets/1348ceb1-a232-4301-8459-e93a3aed01b6" alt="smart_logo" width="90" height="90" >
+<img src="https://github.com/user-attachments/assets/59931057-4709-4bf5-9fed-4772df0355c9" alt="tec_logo" width="350" height="75"> &emsp;  &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&emsp;&emsp;&ensp; &emsp;&emsp;&ensp; &emsp;&emsp;&ensp; &emsp;&emsp;&ensp;&emsp;&emsp;&ensp;&emsp;&emsp;&ensp;<img src="https://github.com/user-attachments/assets/1348ceb1-a232-4301-8459-e93a3aed01b6" alt="smart_logo" width="90" height="85" >
 
 ## Table of Contents
 
