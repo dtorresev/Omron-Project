@@ -220,6 +220,18 @@ Once the robot has read the indication value set to 1, the robot will move to th
    
 ![img](https://github.com/user-attachments/assets/5b868b6a-3e25-4204-86cb-e72ad1ed1948)
 
+## PI System
+
+> PI Vision was not included for the initial delivery of this project.
+
+Using a Modbus protocol implementing Modbus TCP/IP, communication was established with the TM5M-700 manipulator. 
+
+Using AVEVA PI System, and joining a local server created for Tecnológico de Monterrey, we were able to create a personal database to gather information from the robot, monitoring its state during operation.
+
+A service was created using PI Interface Configuration Utility to provide a bridge between the robot and the server using Modbus TCP/IP. Then, by creating PI Points associated with a particular register address each attribute of interest was monitored in real-time. The last step was including said PI Points as elements of a database, and using AVEVA PI Vision, a user-interface was developed to provide a visual representation of the robot's performance in real-time.
+
+[![Pivision](https://img.youtube.com/vi/LyFWUElHVyo/0.jpg)](https://www.youtube.com/watch?v=LyFWUElHVyo)
+
 ## Results
 
 The performance of the program worked as expected, picking up the parts from the indicated places as established and delivering them to the corresponding station, uploading the part's information to a dashboard updated via Telnet using ARCL.
