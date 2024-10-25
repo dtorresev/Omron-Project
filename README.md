@@ -198,7 +198,7 @@ __QR Scanning__: Containing information regarding the batch and part ID of the p
 
 __Color Detection__: In this case, the robot was set different criteria for evaluation to label the color of the part, being blue, white or default the main labels indicated. Here blue represented a faulty or defective part, white a standard quality, and default indicated that there was not enough information to label the part's color, like an empty tray.
 
-![Captura de pantalla 2024-10-21 144100](https://github.com/user-attachments/assets/b55f9e43-cfd2-44f0-8597-a6e41326c0c0) 
+![img](https://github.com/user-attachments/assets/b55f9e43-cfd2-44f0-8597-a6e41326c0c0) 
 
 The vision subprocess is composed of the 3 previous features, where the manipulator's camera is located in a reading position perpendicular to the part, runs the vision tasks then using multiple displays for debugging purposes, and creating a variable with the batch, ID and color of the part.
 
